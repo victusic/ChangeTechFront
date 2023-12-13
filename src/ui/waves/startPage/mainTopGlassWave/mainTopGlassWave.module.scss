@@ -1,0 +1,25 @@
+.waveSvg{
+    position: absolute;
+    width: 907px;
+    top: -80px;
+    @media (max-width: 1366px) {
+        top: 0px;
+        width: 619px;
+    }
+    @media (max-width: 1024px) {
+        width: 495px;
+    }
+    @media (max-width: 768px) {
+        width: 552px;
+    }
+    @media (max-width: 480px) {
+        width: 345px;
+    }
+    @media (max-width: 320px) {
+        width: 230px;
+    }
+}
+
+.back{
+    fill: var(--lightGlass);
+}

@@ -1,0 +1,35 @@
+.waveSvg{
+    position: absolute;
+    width: 766px;
+    top: -60px;
+    left: 495px;
+    @media (max-width: 1366px) {
+        top: 0px;
+        width: 522px;
+        left: 338px;
+    }
+    @media (max-width: 1024px) {
+        width: 418px;
+        left: 270px;
+    }
+    @media (max-width: 768px) {
+        width: 466px;
+        left: 300px;
+    }
+    @media (max-width: 480px) {
+        width: 291px;
+        left: 200px;
+    }
+    @media (max-width: 320px) {
+        width: 194px;
+        left: 125px;
+    }
+}
+
+.leftColor{
+    stop-color: var(--mainTopCenterWaveLeft);
+}
+
+.rightColor{
+    stop-color: var(--mainTopCenterWaveRight);
+}
