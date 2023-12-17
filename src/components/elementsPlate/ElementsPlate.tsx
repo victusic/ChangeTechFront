@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styles from './elementsPlate.module.scss';
 
-export const ElementsPlate = ({children}) => {
+interface ElementsPlateProps {
+  children: ReactNode;
+}
+
+export const ElementsPlate: React.FC<ElementsPlateProps> = ({children}) => {
   return (
     <div className={styles.waves}>
       {children}

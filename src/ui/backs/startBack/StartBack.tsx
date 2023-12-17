@@ -1,25 +1,14 @@
 'use client'
-import React from 'react'
-import { useState, useEffect } from 'react';
+import React, { ReactNode } from 'react'
 import styles from './startBack.module.scss'
+import useViewportHeight from '@/hooks/useViewportHeight';
+interface StartBackProps {
+  children: ReactNode;
+}
 
+export const StartBack: React.FC<StartBackProps> = ({children}) => {
 
-export const StartBack = ({children}) => {
-  const [viewportHeight, setViewportHeight] = useState(0);
-
-    useEffect(() => {
-      setViewportHeight(window.innerHeight);
-
-      function handleResize() {
-        setViewportHeight(window.innerHeight);
-      }
-
-      window.addEventListener('resize', handleResize);
-
-      return () => {
-        window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const viewportHeight = useViewportHeight();
 
   return (
     <div className={styles.back} style={{height: viewportHeight+'px'}}>
