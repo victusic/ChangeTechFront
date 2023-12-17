@@ -5,7 +5,9 @@ import Telegram from "../src/assets/icons/links/telegram/Telegram"
 import { ElementsPlate } from "../src/components/elementsPlate/ElementsPlate"
 import { MainWaves } from "../src/components/startPage/mainWaves/MainWaves"
 import UnderLogoText from "../src/components/startPage/underLogoText/UnderLogoText"
+import Header from "../src/modules/header/Header"
 import { StartBack } from "../src/ui/backs/startBack/StartBack"
+import { StartPlateButton } from "../src/ui/buttons/StartPlateButton/StartPlateButton"
 import Logo from "../src/ui/logo/Logo"
 
 const index = () => {
@@ -15,6 +17,11 @@ const index = () => {
       <ElementsPlate>
         <Logo/>
         <UnderLogoText/>
+
+        <Header/>
+
+        <StartPlateButton></StartPlateButton>
+
         <Telegram/>
         <Git/>
         <Cv/>
