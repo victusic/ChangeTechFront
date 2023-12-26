@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './header.module.scss';
-import HeaderNavigateButton from '@/ui/buttons/HeaderNavigateButton/HeaderNavigateButton';
 import { useWindowResize } from '@/hooks/useWindowResize';
+import { Button } from '@/ui/buttons';
 
 const Header: React.FC = () => {
 
@@ -10,9 +10,9 @@ const Header: React.FC = () => {
   return (
     view < 4 ? 
       <div className={styles.headerPlateDesktop}>
-        <HeaderNavigateButton>Как это работает?</HeaderNavigateButton>
-        <HeaderNavigateButton>О нас</HeaderNavigateButton>
-        <HeaderNavigateButton>Rus</HeaderNavigateButton>
+        <Button variant='header'>Как это работает</Button>
+        <Button variant='header'>О нас</Button>
+        <Button variant='header'>Rus</Button>
       </div>
     :
     <div></div>
