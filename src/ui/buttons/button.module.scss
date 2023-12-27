@@ -1,0 +1,77 @@
+.startPlate{
+  position: absolute;
+  bottom: 176px;
+  right: 388px;
+
+  width: 314px;
+  height: 82px;
+  border-radius: 90px;
+
+  background: linear-gradient(86deg, var(--accentButtonLeft) 0.58%, var(--accentButtonRight) 96.16%);
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  color: var(--mainText);
+  font-family: 'Russo One';
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  
+
+  &:hover{ background: linear-gradient(86deg, var(--accentButtonLeftHover) 0.58%, var(--accentButtonRightHover) 96.16%)}
+  &:active{ background: linear-gradient(86deg, var(--accentButtonLeftActive) 0.58%, var(--accentButtonRightActive) 96.16%)}
+
+  @media (max-width: 1366px) {
+    bottom: 103px;
+    right: 288px;
+
+    width: 207px;
+    height: 54px;
+
+    font-size: 17px;
+  }
+
+  @media (max-width: 1024px) {
+    bottom: 103px;
+    right: 206px;
+
+    width: 180px;
+    height: 46px;
+
+    font-size: 15px;
+  }
+
+  @media (max-width: 768px) {
+    bottom: 546px;
+    right: 43px;
+  }
+
+  @media (max-width: 480px) {
+    bottom: 190px;
+    right: 0px;
+
+    width: 170px;
+    height: 42px;
+
+    font-size: 14px;
+  }
+
+  @media (max-width: 320px) {
+    bottom: 40px;
+    right: 20px;
+
+    width: 140px;
+    height: 32px;
+
+    font-size: 12px;
+  }
+}
+
+.header{
+  font-family: 'Russo One';
+  font-size: 20px;
+  color: var(--mainText);
+  line-height: normal;
+
+  @media (max-width: 1366px) {font-size: 18px}
+  @media (max-width: 1024px) {font-size: 16px}
+}
