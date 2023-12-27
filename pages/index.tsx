@@ -1,3 +1,4 @@
+import React from 'react'
 import Cv from "../src/assets/icons/links/cv/Cv"
 import Git from "../src/assets/icons/links/git/Git"
 import Linked from "../src/assets/icons/links/linked/Linked"
