@@ -1,22 +1,25 @@
 import { ReactNode, ElementType } from 'react';
 import styles from './button.module.scss';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 interface ButtonProps<T extends ElementType = 'button'> {
   as?: T
-  variant?:
+  variant:
     | 'startPlate'
     | 'header'
   disabled?: boolean
   type?: 'submit' | 'reset' | 'button' | undefined
-  children?: ReactNode
+  children: ReactNode
   className?: string
   to?: string
 }
 
+const cx = classNames.bind(styles);
+
 export const Button: React.FC<ButtonProps> = ({
   as,
-  variant = 'startPlate',
+  variant = '',
   disabled,
   type,
   children,
@@ -24,12 +27,16 @@ export const Button: React.FC<ButtonProps> = ({
   to,
   ...rest
 }) => {
-  const buttonClassName = `${styles[variant]} ${className}`;
+
+  const buttonClasses = {
+    [styles.button]: true, 
+    [styles[variant]]: true, 
+  }
 
   return to ? (
     <Link href={to as string}>
       <button
-        className={buttonClassName}
+        className={cx(buttonClasses, className)}
         disabled={disabled} 
         type={type}
         {...(rest as ButtonProps)} 
@@ -39,7 +46,7 @@ export const Button: React.FC<ButtonProps> = ({
     </Link>
   ) : (
     <button
-    className={buttonClassName}
+    className={cx(buttonClasses, className)}
       disabled={disabled} 
       type={type}
       {...(rest as ButtonProps)}
