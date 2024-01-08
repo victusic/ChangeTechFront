@@ -16,6 +16,7 @@
   font-style: normal;
   font-weight: 400;
   
+  border: none;
 
   &:hover{ background: linear-gradient(86deg, var(--accentButtonLeftHover) 0.58%, var(--accentButtonRightHover) 96.16%)}
   &:active{ background: linear-gradient(86deg, var(--accentButtonLeftActive) 0.58%, var(--accentButtonRightActive) 96.16%)}
@@ -41,14 +42,15 @@
   }
 
   @media (max-width: 768px) {
-    bottom: 546px;
+    top: 395px;
+    bottom: unset;
     right: 43px;
   }
 
   @media (max-width: 480px) {
     bottom: 190px;
     right: 0px;
-
+    top: unset;
     width: 170px;
     height: 42px;
 
@@ -56,8 +58,9 @@
   }
 
   @media (max-width: 320px) {
-    bottom: 40px;
-    right: 20px;
+    position: relative;
+    bottom: unset;
+    right: unset;
 
     width: 140px;
     height: 32px;
@@ -71,6 +74,8 @@
   font-size: 20px;
   color: var(--mainText);
   line-height: normal;
+  background: none;
+  border: none;
 
   @media (max-width: 1366px) {font-size: 18px}
   @media (max-width: 1024px) {font-size: 16px}
