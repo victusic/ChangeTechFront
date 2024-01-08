@@ -3,47 +3,42 @@ import Git from "@/assets/icons/links/git/Git"
 import Linked from "@/assets/icons/links/linked/Linked"
 import Telegram from "@/assets/icons/links/telegram/Telegram"
 import { ElementsPlate } from "@/components/elementsPlate/ElementsPlate"
-import Header from "@/components/startPage/header/Header"
+import { Header } from "@/components/startPage/header"
 import { useWindowResize } from "@/hooks/useWindowResize"
 import { Button } from "@/ui/button"
 import { Logo } from "@/ui/logo/Logo"
-import { Sphere } from "@/ui/sphere"
 import { Title } from "@/ui/title"
 import { useTranslation } from 'next-i18next'
+import styles from './startScreen.module.scss';
+import { NavigationSphere } from "@/components/startPage/navigationSphere"
 
 export const StartScreen: React.FC = ({}) => {
   const { t } = useTranslation('index')
   const view = useWindowResize();
+
   return (
     <ElementsPlate>
       <Logo/>
       <Title variant="underLogo">{t('startPlate.underLogoText')}</Title>
 
       <Header/>
-      <Title variant="startPlate">{t('startPlate.PreviewTextPhone')}</Title>
-      <Button variant='startPlate'>{t('startPlate.startButton')}</Button>
-      
-      {view === 1 && 
-        <>
-          <Sphere variant="v1" size={45} top={27} left={454}/>
-          <Sphere variant="v1" size={39} top={235} left={679}/>
-          <Sphere variant="v1" size={69} top={47} left={1156}/>
-          <Sphere variant="v1" size={52} top={153} right={140}/>
+      {view !== 6 ? 
+      <>
+        <Title variant="startPlate">{t('startPlate.PreviewTextPhone')}</Title>
+        <Button variant='startPlate'>{t('startPlate.startButton')}</Button>
+      </> : 
+      <div className={styles.mobileButtonPlate}>
+        <Title variant="startPlate">{t('startPlate.PreviewTextPhone')}</Title>
+        <Button variant='startPlate'>{t('startPlate.startButton')}</Button>
+      </div>}
 
-          <Sphere variant="v1" size={72} top={426} left={140}/>
-          <Sphere variant="v1" size={77} bottom={23} left={224}/>
-          <Sphere variant="v1" size={64} bottom={21} left={859}/>
-          <Sphere variant="v1" size={36} bottom={147} right={743}/>
-          <Sphere variant="v1" size={94} bottom={22} right={162}/>
-          <Sphere variant="v1" size={46} bottom={276} right={50}/>
-        </>
-      }
-      
-
+      <div></div>
       <Telegram/>
       <Git/>
       <Cv/>
       <Linked/>
+
+      <NavigationSphere/>
     </ElementsPlate>
   )
 }

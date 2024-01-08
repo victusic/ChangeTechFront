@@ -1,7 +1,9 @@
+const Cookies = require('js-cookie');
+
 /** @type {import('next-i18next').UserConfig} */
 module.exports = {
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: Cookies.get('change-tech language') || 'en',
     locales: ['en', 'ru', 'kz'],
   },
 }

@@ -7,6 +7,7 @@ interface SphereProps {
     | 'v1'
     | 'v2'
     | 'v3'
+    | 'vNone'
   children?: ReactNode
   className?: string
   size: number
@@ -14,6 +15,7 @@ interface SphereProps {
   left?: number
   right?: number
   bottom?: number
+  pos?: string
 }
 
 const cx = classNames.bind(styles);
@@ -26,6 +28,7 @@ export const Sphere: React.FC<SphereProps> = ({
   left,
   bottom,
   right,
+  pos = 'absolute',
   ...rest
 }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -49,6 +52,7 @@ export const Sphere: React.FC<SphereProps> = ({
   const sphereClasses = {
     [styles.sphere]: true, 
     [styles[variant]]: true, 
+    [styles[pos]]: true, 
   }
 
   return (
