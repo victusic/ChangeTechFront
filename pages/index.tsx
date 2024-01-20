@@ -8,25 +8,35 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 
 const index = () => {
   const controls = useRef<typeof OrbitControls | null>(null);
-  //<TabletModel/><DroneModel/><PhoneModel/><LaptopModel/>
+  /*
+  <TabletModel/>
+  <DroneModel/>
+  <PhoneModel/>
+  <LaptopModel/>
+  <CoffeeMachineModel />
+
+  <ambientLight intensity={1} />
+  */
+
   return (
     <StartBack>
       <MainWaves/>
       <StartScreen/>
       <SphereLayout/>
       <NavigationArrows/>
-      <div style={{position: 'absolute', zIndex: 99999999, width: '400px', height: '400px', top: 0}}>
+      <div style={{position: 'absolute', zIndex: 99999999, width: '580px', height: '580px', top: '200px', left: '200px', background: '#ffffff11'}}>
         <Canvas
           camera={{
-            fov: 90,
-            position: [0, 0, 3],
-            rotation: [0,  0, 10],
+            type: "OrthographicCamera",
+            zoom: 1,
+            position: [0, 0, 5], 
           }}
         >
           <OrbitControls enableZoom={false} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2}/> 
-          <ambientLight intensity={0.1} />
-          <directionalLight position={[1, 1, 1]} intensity={0.8} />
-          <CoffeeMachineModel/><TabletModel/><DroneModel/><PhoneModel/><LaptopModel/>
+
+          <ambientLight intensity={1.4} />
+  
+          <LaptopModel/>
         </Canvas>
       </div>
       
@@ -38,7 +48,7 @@ export default index
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { TabletModel } from '../src/assets/3d/Tablet'
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, Shadow } from '@react-three/drei'
 import { DroneModel } from '../src/assets/3d/Drone'
 import { PhoneModel } from '../src/assets/3d/Phone'
 import { LaptopModel } from '../src/assets/3d/Laptop'

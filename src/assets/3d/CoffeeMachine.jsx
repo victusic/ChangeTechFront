@@ -13,9 +13,9 @@ import { useGLTF } from '@react-three/drei'
 export function CoffeeMachineModel(props) {
   const { nodes, materials } = useGLTF('./models/coffeeMachine/coffeemachine.gltf')
   return (
-    <group {...props} dispose={null} scale={4}>
-      <mesh geometry={nodes.Object_4.geometry} material={materials.M_Coffee} rotation={[Math.PI / 2, 0, 0]} />
-    </group>
+    <group {...props} dispose={null} scale={9.6} rotation={[-1.565, 0, 0]} position={[0, -1.8, 0]}>
+  <mesh geometry={nodes.Object_4.geometry} material={materials.M_Coffee} rotation={[Math.PI / 2, 0, 0]} />
+</group>
   )
 }
 
