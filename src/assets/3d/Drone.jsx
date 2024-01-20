@@ -9,7 +9,7 @@ export function DroneModel(props) {
   useEffect(() => {
     const animationToPlay = actions['Take 01'];
     animationToPlay.play({ autoplay: true}); //, reset: false
-    //animationToPlay.setLoop(Infinity);
+    animationToPlay.setLoop(Infinity);
   }, []);
 
   return (
@@ -55,9 +55,6 @@ export function DroneModel(props) {
             </group>
             <group name="Cylinder001" position={[-0.06, 3.094, 0.252]} rotation={[Math.PI / 2, 0, 0]} scale={0.122}>
               <mesh name="Cylinder001_0" geometry={nodes.Cylinder001_0.geometry} material={materials['Cylinder.001_0']} />
-            </group>
-            <group name="Circle006" position={[0.003, 0.457, -4.295]} scale={12.303}>
-              <mesh name="Circle006_0" geometry={nodes.Circle006_0.geometry} material={materials['Material.006']} />
             </group>
           </group>
         </group>

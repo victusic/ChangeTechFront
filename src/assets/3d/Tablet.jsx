@@ -5,7 +5,7 @@ export function TabletModel(props) {
   const { nodes, materials } = useGLTF('./models/tablet/tablet.gltf')
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 1.965, 0, 0]} scale={3}>
+      <group rotation={[-Math.PI / 1.965, 0, 0]} scale={6}>
         <group position={[0, 0, -0.35]}>
           <mesh geometry={nodes.iPad_Pro_2020_Body_0.geometry} material={materials.Body} />
           <mesh geometry={nodes.iPad_Pro_2020_screen_0.geometry} material={materials.screen} />

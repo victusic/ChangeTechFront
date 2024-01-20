@@ -20,7 +20,6 @@ export const StartScreen: React.FC = ({}) => {
     <ElementsPlate>
       <Logo/>
       <Title variant="underLogo">{t('startPlate.underLogoText')}</Title>
-
       <Header/>
       {view !== 6 ? 
       <>
