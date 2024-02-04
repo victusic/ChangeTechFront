@@ -1,3 +1,3 @@
-import { MainBottomGlassCenterWave } from "./MainBottomGlassCenterWave"
+import { MainBottomGlassCenterWave } from './MainBottomGlassCenterWave';
 
-export { MainBottomGlassCenterWave }
+export { MainBottomGlassCenterWave };

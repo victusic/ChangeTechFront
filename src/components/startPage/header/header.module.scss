@@ -1,4 +1,4 @@
-.headerPlateDesktop{
+.headerPlateDesktop {
   position: absolute;
   top: 0;
   right: 0;
@@ -7,6 +7,10 @@
   justify-content: space-between;
   //background-color: bisque;
 
-  @media (max-width: 1366px) {width: 363px}
-  @media (max-width: 1024px) {width: 301px}
+  @media (max-width: 1366px) {
+    width: 363px;
+  }
+  @media (max-width: 1024px) {
+    width: 301px;
+  }
 }

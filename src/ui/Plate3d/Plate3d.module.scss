@@ -1,0 +1,53 @@
+.plate3d {
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  bottom: 60px;
+  left: 315px;
+  z-index: 9999;
+  background-color: #ffffff11;
+
+  @media (max-width: 1680px) {
+    bottom: 10px;
+    left: 200px;
+    width: 520px;
+    height: 520px;
+  }
+  @media (max-width: 1366px) {
+    width: 460px;
+    height: 460px;
+    bottom: 30px;
+    left: 200px;
+  }
+  @media (max-width: 1170px) {
+    left: 120px;
+  }
+
+  @media (max-width: 1024px) {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    left: unset;
+    top: unset;
+    bottom: unset;
+  }
+
+  @media (max-width: 480px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (max-width: 320px) {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.mobile3dPlate {
+  position: absolute;
+  //background-color: aqua;
+  width: 100%;
+  top: 220px;
+  display: flex;
+  justify-content: center;
+}

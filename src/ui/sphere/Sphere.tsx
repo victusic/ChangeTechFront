@@ -3,19 +3,15 @@ import styles from './sphere.module.scss';
 import classNames from 'classnames';
 
 interface SphereProps {
-  variant:
-    | 'v1'
-    | 'v2'
-    | 'v3'
-    | 'vNone'
-  children?: ReactNode
-  className?: string
-  size: number
-  top?: number
-  left?: number
-  right?: number
-  bottom?: number
-  pos?: string
+  variant: 'v1' | 'v2' | 'v3' | 'vNone';
+  children?: ReactNode;
+  className?: string;
+  size: number;
+  top?: number;
+  left?: number;
+  right?: number;
+  bottom?: number;
+  pos?: string;
 }
 
 const cx = classNames.bind(styles);
@@ -23,7 +19,7 @@ const cx = classNames.bind(styles);
 export const Sphere: React.FC<SphereProps> = ({
   variant = 'v1',
   className,
-  size, 
+  size,
   top,
   left,
   bottom,
@@ -42,22 +38,22 @@ export const Sphere: React.FC<SphereProps> = ({
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const distanceFromCursor = 90; 
+  const distanceFromCursor = 90;
 
-  const updatedTop = top !== undefined ? top - (cursorPosition.y / distanceFromCursor) : undefined;
-  const updatedLeft = left !== undefined ? left - (cursorPosition.x / distanceFromCursor) : undefined;
-  const updatedBottom = bottom !== undefined ? bottom - (cursorPosition.y / distanceFromCursor) : undefined;
-  const updatedRight = right !== undefined ? right - (cursorPosition.x / distanceFromCursor) : undefined;
+  const updatedTop = top !== undefined ? top - cursorPosition.y / distanceFromCursor : undefined;
+  const updatedLeft = left !== undefined ? left - cursorPosition.x / distanceFromCursor : undefined;
+  const updatedBottom = bottom !== undefined ? bottom - cursorPosition.y / distanceFromCursor : undefined;
+  const updatedRight = right !== undefined ? right - cursorPosition.x / distanceFromCursor : undefined;
 
   const sphereClasses = {
-    [styles.sphere]: true, 
-    [styles[variant]]: true, 
-    [styles[pos]]: true, 
-  }
+    [styles.sphere]: true,
+    [styles[variant]]: true,
+    [styles[pos]]: true,
+  };
 
   return (
-    <div 
-      className={cx(sphereClasses, className)} 
+    <div
+      className={cx(sphereClasses, className)}
       style={{
         width: `${size}px`,
         height: `${size}px`,
@@ -65,9 +61,8 @@ export const Sphere: React.FC<SphereProps> = ({
         left: updatedLeft !== undefined ? `${updatedLeft}px` : undefined,
         bottom: updatedBottom !== undefined ? `${updatedBottom}px` : undefined,
         right: updatedRight !== undefined ? `${updatedRight}px` : undefined,
-      }} 
+      }}
       {...rest}
-    >
-    </div>
+    ></div>
   );
 };

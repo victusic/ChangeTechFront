@@ -1,3 +1,3 @@
-import { MainWaves } from "./MainWaves"
+import { MainWaves } from './MainWaves';
 
-export { MainWaves }
+export { MainWaves };

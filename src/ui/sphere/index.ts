@@ -1,3 +1,3 @@
-import { Sphere } from "./Sphere"
+import { Sphere } from './Sphere';
 
-export { Sphere }
+export { Sphere };

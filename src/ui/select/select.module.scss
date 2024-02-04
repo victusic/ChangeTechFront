@@ -1,7 +1,7 @@
-.select{
+.select {
   position: relative;
 }
-.header{
+.header {
   font-family: 'Russo One';
   font-size: 20px;
   color: var(--mainText);
@@ -9,17 +9,21 @@
   background: none;
   border: none;
 
-  @media (max-width: 1366px) {font-size: 18px}
-  @media (max-width: 1024px) {font-size: 16px}
+  @media (max-width: 1366px) {
+    font-size: 18px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
 
-  ul{
+  ul {
     position: absolute;
     list-style: none;
     padding: 0;
     top: 85%;
     right: 8px;
-    
-    li{
+
+    li {
       padding: 8px;
       cursor: pointer;
       text-align: right;
@@ -27,7 +31,7 @@
   }
 }
 
-.triangle{
+.triangle {
   margin-left: 8px;
   width: 0;
   height: 0;
@@ -37,7 +41,7 @@
   transition: transform 0.3s ease;
 }
 
-.selectPlate{
+.selectPlate {
   display: flex;
   align-items: center;
   cursor: pointer;

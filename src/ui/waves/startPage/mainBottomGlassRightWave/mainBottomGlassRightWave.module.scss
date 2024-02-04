@@ -1,27 +1,27 @@
-.waveSvg{
-    position: absolute;
-    width: 1072px;
-    bottom: -80px;
-    right: 0;
-    @media (max-width: 1366px) {
-        bottom: -56px;
-        width: 763px;
-    }
-    @media (max-width: 1024px) {
-        bottom: 0px;
-        width: 572px;
-    }
-    @media (max-width: 768px) {
-        width: 429px;
-    }
-    @media (max-width: 480px) {
-        width: 268px;
-    }
-    @media (max-width: 320px) {
-        width: 179px;
-    }
+.waveSvg {
+  position: absolute;
+  width: 1072px;
+  bottom: -80px;
+  right: 0;
+  @media (max-width: 1366px) {
+    bottom: -56px;
+    width: 763px;
+  }
+  @media (max-width: 1024px) {
+    bottom: 0px;
+    width: 572px;
+  }
+  @media (max-width: 768px) {
+    width: 429px;
+  }
+  @media (max-width: 480px) {
+    width: 268px;
+  }
+  @media (max-width: 320px) {
+    width: 179px;
+  }
 }
 
-.back{
-    fill: var(--lightGlass);
+.back {
+  fill: var(--lightGlass);
 }

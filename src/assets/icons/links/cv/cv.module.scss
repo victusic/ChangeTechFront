@@ -1,37 +1,37 @@
-.linkSvg{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    fill: var(--mainText);
-    @media (max-width: 1366px) {
-        width: 32px;
-        height: 32px;
-    }
-    @media (max-width: 1024px) {
-        width: 28px;
-        height: 28px;
-    }
-    @media (max-width: 768px) {
-        width: 28px;
-        height: 28px;
-    }
-    @media (max-width: 480px) {
-        width: 24px;
-        height: 24px;
-    }
-    @media (max-width: 320px) {
-        width: 20px;
-        height: 20px;
-    }
+.linkSvg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  fill: var(--mainText);
+  @media (max-width: 1366px) {
+    width: 32px;
+    height: 32px;
+  }
+  @media (max-width: 1024px) {
+    width: 28px;
+    height: 28px;
+  }
+  @media (max-width: 768px) {
+    width: 28px;
+    height: 28px;
+  }
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+  }
+  @media (max-width: 320px) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.linkSvg:hover{
-    fill: var(--sphere3);
+.linkSvg:hover {
+  fill: var(--sphere3);
 }
 
-.linkSvg:active{
-    fill: var(--sphere1);
+.linkSvg:active {
+  fill: var(--sphere1);
 }

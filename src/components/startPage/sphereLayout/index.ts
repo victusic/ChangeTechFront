@@ -1,3 +1,3 @@
-import { SphereLayout } from "./SphereLayout"
+import { SphereLayout } from './SphereLayout';
 
-export { SphereLayout }
+export { SphereLayout };

@@ -1,3 +1,3 @@
-import { NavigationArrows } from "./NavigationArrows"
+import { NavigationArrows } from './NavigationArrows';
 
-export { NavigationArrows }
+export { NavigationArrows };

@@ -1,3 +1,3 @@
-import { MainTopLeftWave } from "./MainTopLeftWave"
+import { MainTopLeftWave } from './MainTopLeftWave';
 
-export { MainTopLeftWave }
+export { MainTopLeftWave };

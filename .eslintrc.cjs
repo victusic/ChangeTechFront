@@ -21,6 +21,6 @@ module.exports = {
   },
   plugins: ['import', 'react', '@typescript-eslint', 'prettier'],
   rules: {
-    'prettier/prettier': ['error', { endOfLine: 'auto' }]
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
   },
-}
+};

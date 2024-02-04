@@ -6,4 +6,4 @@ module.exports = {
     defaultLocale: Cookies.get('change-tech language') || 'en',
     locales: ['en', 'ru', 'kz'],
   },
-}
+};

@@ -8,19 +8,27 @@ export const NavigationSphere: React.FC = () => {
   const view = useWindowResize();
   useEffect(() => {
     switch (view) {
-      case 1: setSize(14); break;
-      case 2: setSize(12); break;
-      case 6: setSize(8); break;
-      default: setSize(10); break;
+      case 1:
+        setSize(14);
+        break;
+      case 2:
+        setSize(12);
+        break;
+      case 6:
+        setSize(8);
+        break;
+      default:
+        setSize(10);
+        break;
     }
   }, [view]);
   return (
     <div className={styles.navigationPlate}>
-      <Sphere size={size} variant='vNone' pos='relative'/>
-      <Sphere size={size} variant='v1' pos='relative'/>
-      <Sphere size={size} variant='vNone' pos='relative'/>
-      <Sphere size={size} variant='vNone' pos='relative'/>
-      <Sphere size={size} variant='vNone' pos='relative'/>
+      <Sphere size={size} variant="vNone" pos="relative" />
+      <Sphere size={size} variant="v1" pos="relative" />
+      <Sphere size={size} variant="vNone" pos="relative" />
+      <Sphere size={size} variant="vNone" pos="relative" />
+      <Sphere size={size} variant="vNone" pos="relative" />
     </div>
   );
 };

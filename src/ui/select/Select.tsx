@@ -6,33 +6,31 @@ import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 
 interface SelectProps {
-  variant:
-    | 'footer'
-    | 'header'
-  className?: string
+  variant: 'footer' | 'header';
+  className?: string;
 }
 
 const cx = classNames.bind(styles);
 
 const langs = ['en', 'ru', 'kz'];
 
-export const Select: React.FC<SelectProps> = ({variant, className}) => {
+export const Select: React.FC<SelectProps> = ({ variant, className }) => {
   const { i18n } = useTranslation();
   const router = useRouter();
   const selectClasses = {
-    [styles.select]: true, 
-    [styles[variant]]: true, 
-  }
+    [styles.select]: true,
+    [styles[variant]]: true,
+  };
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<string>(i18n.language);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleLanguageChange = (language: string) => {
-    if(!i18n) return;
+    if (!i18n) return;
     setSelectedLanguage(language);
     i18n.changeLanguage(language);
-    Cookies.set('change-tech language', language, { expires: 30 })
+    Cookies.set('change-tech language', language, { expires: 30 });
     router.push(`/${language}`);
     setIsOpen(false);
   };
@@ -51,12 +49,17 @@ export const Select: React.FC<SelectProps> = ({variant, className}) => {
     <div ref={dropdownRef} className={cx(selectClasses, className)}>
       <div onClick={() => setIsOpen(!isOpen)} className={cx(styles.selectPlate)}>
         {selectedLanguage.toUpperCase()}
-        <div className={cx(styles.triangle)} style={{transform: isOpen ? 'rotate(90deg)' : 'rotate(270deg)'}}/>
+        <div
+          className={cx(styles.triangle)}
+          style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(270deg)' }}
+        />
       </div>
       {isOpen && (
         <ul>
           {langs.map((language) => (
-            <li key={language} onClick={() => handleLanguageChange(language)} >{language.toUpperCase()}</li>
+            <li key={language} onClick={() => handleLanguageChange(language)}>
+              {language.toUpperCase()}
+            </li>
           ))}
         </ul>
       )}

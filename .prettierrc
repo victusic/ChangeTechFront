@@ -1,20 +1,14 @@
 {
-  "trailingComma": "es5",
-  "tabWidth": 2,
-  "semi": false,
   "singleQuote": true,
+  "semi": true,
   "importOrder": ["^@(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "pluginSearchDirs": ["./node_modules"],
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ]
+  "printWidth": 110,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "endOfLine": "crlf",
+  "proseWrap": "always"
 }
