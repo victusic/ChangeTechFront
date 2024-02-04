@@ -1,3 +1,3 @@
-import { MainTopGlassWave } from "./MainTopGlassWave"
+import { MainTopGlassWave } from './MainTopGlassWave';
 
-export { MainTopGlassWave }
+export { MainTopGlassWave };

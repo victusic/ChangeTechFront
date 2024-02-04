@@ -1,7 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
-const { i18n } = require('./next-i18next.config')
+const { i18n } = require('./next-i18next.config');
 
 module.exports = {
   reactStrictMode: true,
@@ -16,7 +16,7 @@ module.exports = {
               to: path.resolve(__dirname, 'public/models'),
             },
           ],
-        })
+        }),
       );
     }
 

@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
 
 export function LaptopModel(props) {
-  const { nodes, materials } = useGLTF('./models/laptop/laptop.gltf')
+  const { nodes, materials } = useGLTF('./models/laptop/laptop.gltf');
   return (
     <group {...props} dispose={null} scale={1.2} position={[0, -0.8, 0]} rotation={[0, 0, -0.105]}>
       <mesh geometry={nodes.Object_4.geometry} material={materials.Black_plastic} />
@@ -14,7 +14,7 @@ export function LaptopModel(props) {
       <mesh geometry={nodes.Object_10.geometry} material={materials.dark} />
       <mesh geometry={nodes.Object_11.geometry} material={materials.screen} />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('./models/laptop/laptop.gltf')
+useGLTF.preload('./models/laptop/laptop.gltf');

@@ -1,3 +1,3 @@
-import { ElementsPlate } from "./ElementsPlate"
+import { ElementsPlate } from './ElementsPlate';
 
-export { ElementsPlate }
+export { ElementsPlate };

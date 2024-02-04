@@ -7,16 +7,16 @@ Source: https://sketchfab.com/3d-models/phr-generic-coffee-machine-sultan-8738d2
 Title: PHR Generic Coffee Machine - SULTAN
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
 
 export function CoffeeMachineModel(props) {
-  const { nodes, materials } = useGLTF('./models/coffeeMachine/coffeemachine.gltf')
+  const { nodes, materials } = useGLTF('./models/coffeeMachine/coffeemachine.gltf');
   return (
     <group {...props} dispose={null} scale={9.6} rotation={[-1.565, 0, 0]} position={[0, -1.8, 0]}>
-  <mesh geometry={nodes.Object_4.geometry} material={materials.M_Coffee} rotation={[Math.PI / 2, 0, 0]} />
-</group>
-  )
+      <mesh geometry={nodes.Object_4.geometry} material={materials.M_Coffee} rotation={[Math.PI / 2, 0, 0]} />
+    </group>
+  );
 }
 
-useGLTF.preload('./models/coffeeMachine/coffeemachine.gltf')
+useGLTF.preload('./models/coffeeMachine/coffeemachine.gltf');

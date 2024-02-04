@@ -11,9 +11,7 @@
 
 <!--<h4>Project link: https://t.me/AnnunciationBirthdayBot</h4> -->
 
-
 <h6>Project in develop</h6>
-
 
 <h3>RU</h3>
 <!--<h4>Проект, идея которого заключается в гибкой рассылке напоминания о днях рождений записанных в бота людей, а так же праздников</h4>
@@ -25,6 +23,5 @@
 </ul>
 
 <!--<h4>Ссылка на проект: https://t.me/AnnunciationBirthdayBot</h4> -->
-
 
 <h6>Проект в разработке</h6>

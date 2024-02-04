@@ -1,8 +1,8 @@
-.title{
+.title {
   cursor: default;
 }
 
-.underLogo{
+.underLogo {
   font-family: 'Russo One';
   font-size: 22px;
   width: 324px;
@@ -35,7 +35,7 @@
   }
 }
 
-.startPlate{
+.startPlate {
   position: absolute;
   bottom: 334px;
   right: 388px;
@@ -68,17 +68,13 @@
 
   @media (max-width: 768px) {
     text-align: center;
-    top: 325px;
-    bottom: unset;
+    bottom: 184px;
     right: 23px;
   }
 
   @media (max-width: 480px) {
-    width: 191px;
-    top: unset;
-    bottom: 260px;
-    right: -10px;
-
+    bottom: 108px;
+    right: -20px;
     font-size: 12px;
   }
 

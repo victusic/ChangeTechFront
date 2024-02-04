@@ -1,4 +1,4 @@
-.startPlate{
+.startPlate {
   position: absolute;
   bottom: 176px;
   right: 388px;
@@ -15,11 +15,23 @@
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
-  
+
   border: none;
 
-  &:hover{ background: linear-gradient(86deg, var(--accentButtonLeftHover) 0.58%, var(--accentButtonRightHover) 96.16%)}
-  &:active{ background: linear-gradient(86deg, var(--accentButtonLeftActive) 0.58%, var(--accentButtonRightActive) 96.16%)}
+  &:hover {
+    background: linear-gradient(
+      86deg,
+      var(--accentButtonLeftHover) 0.58%,
+      var(--accentButtonRightHover) 96.16%
+    );
+  }
+  &:active {
+    background: linear-gradient(
+      86deg,
+      var(--accentButtonLeftActive) 0.58%,
+      var(--accentButtonRightActive) 96.16%
+    );
+  }
 
   @media (max-width: 1366px) {
     bottom: 103px;
@@ -42,15 +54,13 @@
   }
 
   @media (max-width: 768px) {
-    top: 395px;
-    bottom: unset;
+    bottom: 108px;
     right: 43px;
   }
 
   @media (max-width: 480px) {
-    bottom: 190px;
+    bottom: 48px;
     right: 0px;
-    top: unset;
     width: 170px;
     height: 42px;
 
@@ -69,7 +79,7 @@
   }
 }
 
-.header{
+.header {
   font-family: 'Russo One';
   font-size: 20px;
   color: var(--mainText);
@@ -77,6 +87,10 @@
   background: none;
   border: none;
 
-  @media (max-width: 1366px) {font-size: 18px}
-  @media (max-width: 1024px) {font-size: 16px}
+  @media (max-width: 1366px) {
+    font-size: 18px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
 }

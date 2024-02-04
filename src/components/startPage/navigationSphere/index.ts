@@ -1,3 +1,3 @@
-import { NavigationSphere } from "./NavigationSphere"
+import { NavigationSphere } from './NavigationSphere';
 
-export { NavigationSphere }
+export { NavigationSphere };

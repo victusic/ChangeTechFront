@@ -1,11 +1,11 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
 
 export function PhoneModel(props) {
-  const { nodes, materials } = useGLTF('./models/phone/phone.gltf')
+  const { nodes, materials } = useGLTF('./models/phone/phone.gltf');
   return (
     <group {...props} dispose={null}>
-      <group rotation={[0.025, 0, 0]}scale={0.365}>
+      <group rotation={[0.025, 0, 0]} scale={0.365}>
         <group position={[0, -8, 0]}>
           <mesh geometry={nodes.SSwNHydlPxsUYYx.geometry} material={materials.VlnkJNnmZmryUEK} />
           <mesh geometry={nodes.GoKkDPUheDuuSeZ.geometry} material={materials.FjQZkOEFcAMgVKb} />
@@ -65,7 +65,7 @@ export function PhoneModel(props) {
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('./models/phone/phone.gltf')
+useGLTF.preload('./models/phone/phone.gltf');
