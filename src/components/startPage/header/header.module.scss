@@ -5,7 +5,6 @@
   width: 442px;
   display: flex;
   justify-content: space-between;
-  //background-color: bisque;
 
   @media (max-width: 1366px) {
     width: 363px;
@@ -13,4 +12,16 @@
   @media (max-width: 1024px) {
     width: 301px;
   }
+}
+
+.headerPlateMobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 8px;
+  stroke: var(--mainText);
 }
