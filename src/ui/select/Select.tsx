@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './select.module.scss';
 import classNames from 'classnames';
-import { i18n, useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 

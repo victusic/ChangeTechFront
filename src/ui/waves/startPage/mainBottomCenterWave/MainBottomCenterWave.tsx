@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './mainBottomCenterWave.module.scss';
 
-export const MainBottomCenterWave = ({ ...props }) => {
+export const MainBottomCenterWave = () => {
   return (
     <svg className={styles.waveSvg} viewBox="0 0 1486 598" fill="none">
       <path

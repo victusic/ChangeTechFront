@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { StartScreen } from '../src/modules/startPage/startScreen';
 import { MainWaves } from '../src/components/startPage/mainWaves';
 import { StartBack } from '../src/ui/backs/startBack/StartBack';
@@ -22,6 +20,7 @@ const index = () => {
 export default index;
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import React from 'react';
 
 export async function getStaticProps({ locale }) {
   return {
