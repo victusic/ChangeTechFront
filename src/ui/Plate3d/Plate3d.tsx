@@ -50,7 +50,7 @@ const I3dBlock: React.FC = () => {
         {productType.type === 3 && <LaptopModel />}
         {productType.type === 4 && <CoffeeMachineModel />}
 
-        <TabletModel />
+        {/* <DroneModel /> */}
       </Canvas>
     </div>
   );

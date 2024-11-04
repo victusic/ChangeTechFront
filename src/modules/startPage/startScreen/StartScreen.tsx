@@ -12,7 +12,7 @@ import { useTranslation } from 'next-i18next';
 import styles from './startScreen.module.scss';
 import { NavigationSphere } from '@/components/startPage/navigationSphere';
 
-export const StartScreen: React.FC = ({}) => {
+export const StartScreen: React.FC = () => {
   const { t } = useTranslation('index');
   const view = useWindowResize();
 
