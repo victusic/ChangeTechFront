@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
@@ -11,16 +12,21 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: ['next.config.js', 'next-i18next.config.js'],
+      rules: {
+        '@typescript-eslint/no-require-imports': 'off',
+      },
+    },
+  ],
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.eslint.json'],
-    tsconfigRootDir: __dirname,
-  },
   plugins: ['import', 'react', '@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^React$' }],
+    'react/no-unknown-property': 'warn',
+    'react-hooks/exhaustive-deps': 'off',
+    'react/prop-types': 'off',
   },
 };

@@ -16,7 +16,6 @@ interface ButtonProps<T extends ElementType = 'button'> {
 const cx = classNames.bind(styles);
 
 export const Button: React.FC<ButtonProps> = ({
-  as,
   variant = '',
   disabled,
   type,

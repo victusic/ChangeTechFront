@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './mainBottomGlassCenterWave.module.scss';
 
-export const MainBottomGlassCenterWave = ({ ...props }) => {
+export const MainBottomGlassCenterWave = () => {
   return (
     <svg className={styles.waveSvg} viewBox="0 0 1486 473" fill="none">
       <g filter="url(#filter0_b_120_198)">

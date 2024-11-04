@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { useGLTF, useAnimations, useFrame } from '@react-three/drei';
+/* eslint-disable react/no-unknown-property */
+import { useEffect, useRef } from 'react';
+import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function DroneModel(props) {
   const group = useRef();

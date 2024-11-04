@@ -1,5 +1,5 @@
-import React from 'react';
-import { useGLTF, OrbitControls } from '@react-three/drei';
+/* eslint-disable react/no-unknown-property */
+import { useGLTF } from '@react-three/drei';
 
 export function TabletModel(props) {
   const { nodes, materials } = useGLTF('./models/tablet/tablet.gltf');
