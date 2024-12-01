@@ -24,8 +24,17 @@ export const MainBottomGlassCenterWave = () => {
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
-          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_120_198" />
-          <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_120_198" result="shape" />
+          <feComposite
+            in2="SourceAlpha"
+            operator="in"
+            result="effect1_backgroundBlur_120_198"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_backgroundBlur_120_198"
+            result="shape"
+          />
         </filter>
       </defs>
     </svg>

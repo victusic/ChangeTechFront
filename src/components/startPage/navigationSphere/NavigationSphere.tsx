@@ -1,3 +1,4 @@
+import React from 'react';
 import { Sphere } from '@/ui/sphere';
 import styles from './navigationSphere.module.scss';
 import { useWindowResize } from '@/hooks/useWindowResize';

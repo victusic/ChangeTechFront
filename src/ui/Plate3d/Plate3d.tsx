@@ -1,3 +1,4 @@
+import React from 'react';
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import classNames from 'classnames';
@@ -40,8 +41,13 @@ const I3dBlock: React.FC = () => {
           position: [0, 0, 5],
         }}
       >
-        <OrbitControls enableZoom={false} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
+        <OrbitControls
+          enableZoom={false}
+          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 2}
+        />
 
+        {/* eslint-disable-next-line react/no-unknown-property*/}
         <ambientLight intensity={1.4} />
 
         {productType.type === 0 && <TabletModel />}

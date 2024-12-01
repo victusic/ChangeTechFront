@@ -1,4 +1,4 @@
-import { ReactNode, ElementType } from 'react';
+import React, { ReactNode, ElementType } from 'react';
 import styles from './button.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';

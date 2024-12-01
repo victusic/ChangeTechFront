@@ -4,11 +4,12 @@
   "importOrder": ["^@(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "printWidth": 110,
+  "printWidth": 80,
   "trailingComma": "all",
   "tabWidth": 2,
   "useTabs": false,
   "bracketSpacing": true,
   "endOfLine": "crlf",
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "jsxBracketSameLine": false
 }

@@ -23,7 +23,9 @@ export const Select: React.FC<SelectProps> = ({ variant, className }) => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(i18n.language);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(
+    i18n.language,
+  );
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleLanguageChange = (language: string) => {
@@ -36,7 +38,11 @@ export const Select: React.FC<SelectProps> = ({ variant, className }) => {
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) setIsOpen(false);
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    )
+      setIsOpen(false);
   };
 
   useEffect(() => {
@@ -47,7 +53,10 @@ export const Select: React.FC<SelectProps> = ({ variant, className }) => {
 
   return (
     <div ref={dropdownRef} className={cx(selectClasses, className)}>
-      <div onClick={() => setIsOpen(!isOpen)} className={cx(styles.selectPlate)}>
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className={cx(styles.selectPlate)}
+      >
         {selectedLanguage.toUpperCase()}
         <div
           className={cx(styles.triangle)}

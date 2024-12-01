@@ -4,7 +4,12 @@ import styles from './mainLinearWaves.module.scss';
 
 export const MainLinearWaves = ({ ...props }) => {
   return (
-    <svg className={styles.waveSvg} viewBox="0 0 1920 618" fill="none" {...props}>
+    <svg
+      className={styles.waveSvg}
+      viewBox="0 0 1920 618"
+      fill="none"
+      {...props}
+    >
       <path
         opacity="0.6"
         d="M0 534.412C0 534.412 26 527.412 93.9032 522.412C313.932 506.21 508 615.412 694 615.412C794.581 615.412 861.339 609.984 957 578.912C1093.12 534.696 1143.5 463.001 1271.5 393.911C1381.08 334.763 1441.1 289.424 1560 252.412C1741.5 195.912 1920 209.412 1920 209.412"

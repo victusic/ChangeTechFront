@@ -1,3 +1,4 @@
+import React from 'react';
 import { StartScreen } from '../src/modules/startPage/startScreen';
 import { MainWaves } from '../src/components/startPage/mainWaves';
 import { StartBack } from '../src/ui/backs/startBack/StartBack';
