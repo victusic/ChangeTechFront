@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import styles from './title.module.scss';
 import classNames from 'classnames';
 
@@ -10,7 +10,12 @@ interface TitleProps {
 
 const cx = classNames.bind(styles);
 
-export const Title: React.FC<TitleProps> = ({ variant = '', children, className, ...rest }) => {
+export const Title: React.FC<TitleProps> = ({
+  variant = '',
+  children,
+  className,
+  ...rest
+}) => {
   const titleClasses = {
     [styles.title]: true,
     [styles[variant]]: true,

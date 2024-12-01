@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './navigationArrows.module.scss';
 
 export const NavigationArrows: React.FC = () => {

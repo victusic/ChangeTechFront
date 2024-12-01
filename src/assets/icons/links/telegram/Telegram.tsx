@@ -3,7 +3,13 @@ import styles from './telegram.module.scss';
 
 const Telegram = () => {
   return (
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" className={styles.linkSvg}>
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      className={styles.linkSvg}
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

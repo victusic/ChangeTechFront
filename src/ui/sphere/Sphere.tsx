@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import styles from './sphere.module.scss';
 import classNames from 'classnames';
 
@@ -40,10 +40,20 @@ export const Sphere: React.FC<SphereProps> = ({
 
   const distanceFromCursor = 90;
 
-  const updatedTop = top !== undefined ? top - cursorPosition.y / distanceFromCursor : undefined;
-  const updatedLeft = left !== undefined ? left - cursorPosition.x / distanceFromCursor : undefined;
-  const updatedBottom = bottom !== undefined ? bottom - cursorPosition.y / distanceFromCursor : undefined;
-  const updatedRight = right !== undefined ? right - cursorPosition.x / distanceFromCursor : undefined;
+  const updatedTop =
+    top !== undefined ? top - cursorPosition.y / distanceFromCursor : undefined;
+  const updatedLeft =
+    left !== undefined
+      ? left - cursorPosition.x / distanceFromCursor
+      : undefined;
+  const updatedBottom =
+    bottom !== undefined
+      ? bottom - cursorPosition.y / distanceFromCursor
+      : undefined;
+  const updatedRight =
+    right !== undefined
+      ? right - cursorPosition.x / distanceFromCursor
+      : undefined;
 
   const sphereClasses = {
     [styles.sphere]: true,

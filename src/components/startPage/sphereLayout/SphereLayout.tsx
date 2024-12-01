@@ -1,3 +1,4 @@
+import React from 'react';
 import { Sphere } from '@/ui/sphere';
 import { useWindowResize } from '@/hooks/useWindowResize';
 
