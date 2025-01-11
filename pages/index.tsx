@@ -18,4 +18,13 @@ const index = () => {
   );
 };
 
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`../public/locales/${context.locale}.json`))
+        .default,
+    },
+  };
+}
+
 export default index;

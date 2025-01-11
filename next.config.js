@@ -5,6 +5,10 @@ import path from 'path';
 
 const nextConfig = {
   reactStrictMode: true,
+  i18n: {
+    locales: ['en', 'ru', 'kz'],
+    defaultLocale: 'en',
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.plugins.push(
