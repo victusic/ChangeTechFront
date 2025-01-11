@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './select.module.scss';
 import classNames from 'classnames';
-import { useTranslation } from 'next-i18next';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 
@@ -15,7 +14,6 @@ const cx = classNames.bind(styles);
 const langs = ['en', 'ru', 'kz'];
 
 export const Select: React.FC<SelectProps> = ({ variant, className }) => {
-  const { i18n } = useTranslation();
   const router = useRouter();
   const selectClasses = {
     [styles.select]: true,
@@ -23,17 +21,17 @@ export const Select: React.FC<SelectProps> = ({ variant, className }) => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(
-    i18n.language,
-  );
+  // const [selectedLanguage, setSelectedLanguage] = useState<string>(
+  //   i18n.language,
+  // );
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleLanguageChange = (language: string) => {
-    if (!i18n) return;
-    setSelectedLanguage(language);
-    i18n.changeLanguage(language);
-    Cookies.set('change-tech language', language, { expires: 30 });
-    router.push(`/${language}`);
+    // if (!i18n) return;
+    // setSelectedLanguage(language);
+    // i18n.changeLanguage(language);
+    // Cookies.set('change-tech language', language, { expires: 30 });
+    // router.push(`/${language}`);
     setIsOpen(false);
   };
 
@@ -45,11 +43,11 @@ export const Select: React.FC<SelectProps> = ({ variant, className }) => {
       setIsOpen(false);
   };
 
-  useEffect(() => {
-    router.push(`/${Cookies.get('change-tech language') || 'en'}`);
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  // useEffect(() => {
+  //   router.push(`/${Cookies.get('change-tech language') || 'en'}`);
+  //   document.addEventListener('mousedown', handleClickOutside);
+  //   return () => document.removeEventListener('mousedown', handleClickOutside);
+  // }, []);
 
   return (
     <div ref={dropdownRef} className={cx(selectClasses, className)}>
@@ -57,7 +55,7 @@ export const Select: React.FC<SelectProps> = ({ variant, className }) => {
         onClick={() => setIsOpen(!isOpen)}
         className={cx(styles.selectPlate)}
       >
-        {selectedLanguage.toUpperCase()}
+        {/* {selectedLanguage.toUpperCase()} */}
         <div
           className={cx(styles.triangle)}
           style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(270deg)' }}

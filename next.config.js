@@ -1,19 +1,18 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const path = require('path');
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import path from 'path';
 
-const { i18n } = require('./next-i18next.config');
+/** @type {import('next-i18next').UserConfig} */
 
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
-  i18n,
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.plugins.push(
         new CopyWebpackPlugin({
           patterns: [
             {
-              from: path.resolve(__dirname, 'src/assets/3d/models'),
-              to: path.resolve(__dirname, 'public/models'),
+              from: path.resolve(process.cwd(), 'src/assets/3d/models'),
+              to: path.resolve(process.cwd(), 'public/models'),
             },
           ],
         }),
@@ -23,3 +22,5 @@ module.exports = {
     return config;
   },
 };
+
+export default nextConfig;
