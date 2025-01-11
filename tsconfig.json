@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "jsx": "preserve",
@@ -12,22 +11,30 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noUnusedLocals": false,
     "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     },
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "module": "esnext"
   },
   "include": [
     "next-env.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/assets/3d/Drone.jsx"
+    "src/assets/3d/Drone.jsx",
+    ".next/types/**/*.ts",
+    "pages/layout.tsx"
   ],
   "exclude": ["node_modules"]
 }
+

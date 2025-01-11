@@ -9,32 +9,31 @@ import { useWindowResize } from '@/hooks/useWindowResize';
 import { Button } from '@/ui/button';
 import { Logo } from '@/ui/logo/Logo';
 import { Title } from '@/ui/title';
-import { useTranslation } from 'next-i18next';
 import styles from './startScreen.module.scss';
 import { NavigationSphere } from '@/components/startPage/navigationSphere';
+import { useTranslations } from 'next-intl';
 
 export const StartScreen: React.FC = () => {
-  const { t } = useTranslation('index');
   const view = useWindowResize();
+  const t = useTranslations('indexPage.startPlate');
 
   return (
     <ElementsPlate>
       <Logo />
-      <Title variant="underLogo">{t('startPlate.underLogoText')}</Title>
+      <Title variant="underLogo">{t('underLogoText')}</Title>
       <Header />
       {view !== 6 ? (
         <>
-          <Title variant="startPlate">{t('startPlate.PreviewTextPhone')}</Title>
-          <Button variant="startPlate">{t('startPlate.startButton')}</Button>
+          <Title variant="startPlate">{t('PreviewTextPhone')}</Title>
+          <Button variant="startPlate">{t('startButton')}</Button>
         </>
       ) : (
         <div className={styles.mobileButtonPlate}>
-          <Title variant="startPlate">{t('startPlate.PreviewTextPhone')}</Title>
-          <Button variant="startPlate">{t('startPlate.startButton')}</Button>
+          <Title variant="startPlate">{t('PreviewTextPhone')}</Title>
+          <Button variant="startPlate">{t('startButton')}</Button>
         </div>
       )}
 
-      <div></div>
       <Telegram />
       <Git />
       <Cv />

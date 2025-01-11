@@ -18,15 +18,13 @@ const index = () => {
   );
 };
 
-export default index;
-
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import React from 'react';
-
-export async function getStaticProps({ locale }) {
+export async function getStaticProps(context) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['index'])),
+      messages: (await import(`../public/locales/${context.locale}.json`))
+        .default,
     },
   };
 }
+
+export default index;

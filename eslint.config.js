@@ -11,6 +11,10 @@ export default [
   {
     languageOptions: { globals: globals.browser },
   },
+
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
   {
     rules: {
       'react/no-unknown-property': 'warn',
@@ -19,7 +23,4 @@ export default [
       '@typescript-eslint/no-unused-vars': 'warn',
     },
   },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
 ];
