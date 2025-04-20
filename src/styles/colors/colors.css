@@ -1,0 +1,233 @@
+:root {
+  /*base colors*/
+  --background: #22003d;
+  --sphere1: #005f15;
+  --sphere2: #7200b5;
+  --sphere3: #3900aa;
+  --sphereNone: #472265;
+  --accentButtonLeft: #005f15;
+  --accentButtonRight: #007a31;
+  --accentButtonLeftHover: #01390e;
+  --accentButtonRightHover: #006026;
+  --accentButtonLeftActive: #122800;
+  --accentButtonRightActive: #004b1e;
+  --lightGlass: #ffffff;
+  --darkGlass: #000000;
+  --mainText: #ffffff;
+
+  /*start page*/
+  --mainTopCenterWaveLeft: #c54aff;
+  --mainTopCenterWaveRight: #7008a0;
+
+  --mainTopLeftWaveLeft: #7c00b7;
+  --mainTopLeftWaveRight: #2100a6;
+
+  --mainBottomLeftWaveLeft: #c54aff;
+  --mainBottomLeftWaveRight: #7008a0;
+
+  --mainBottomCenterWaveLeft: #7c00b7;
+  --mainBottomCenterWaveRight: #2100a6;
+
+  --mainLinearWave1: #2e0053;
+  --mainLinearWave2: #2c004f;
+  --mainLinearWave3: #2a004b;
+  --mainLinearWave4: #280047;
+  --mainLinearWave5: #260043;
+  --mainLinearWave6: #23003f;
+  --mainLinearWave7: #21003c;
+}
+
+.theme-phone {
+  /*base colors*/
+  --background: #f2ca3a;
+  --sphere1: #f2ca3a;
+  --sphere2: #f2ca3a;
+  --sphere3: #f2ca3a;
+  --sphereNone: #f2ca3a;
+  --accentButtonLeft: #f2ca3a;
+  --accentButtonRight: #f2ca3a;
+  --accentButtonLeftHover: #f2ca3a;
+  --accentButtonRightHover: #f2ca3a;
+  --accentButtonLeftActive: #f2ca3a;
+  --accentButtonRightActive: #f2ca3a;
+  --lightGlass: #f2ca3a;
+  --darkGlass: #f2ca3a;
+  --mainText: #f2ca3a;
+
+  /*start page*/
+  --mainTopCenterWaveLeft: #f2ca3a;
+  --mainTopCenterWaveRight: #f2ca3a;
+
+  --mainTopLeftWaveLeft: #f2ca3a;
+  --mainTopLeftWaveRight: #f2ca3a;
+
+  --mainBottomLeftWaveLeft: #f2ca3a;
+  --mainBottomLeftWaveRight: #f2ca3a;
+
+  --mainBottomCenterWaveLeft: #f2ca3a;
+  --mainBottomCenterWaveRight: #f2ca3a;
+
+  --mainLinearWave1: #f2ca3a;
+  --mainLinearWave2: #f2ca3a;
+  --mainLinearWave3: #f2ca3a;
+  --mainLinearWave4: #f2ca3a;
+  --mainLinearWave5: #f2ca3a;
+  --mainLinearWave6: #f2ca3a;
+  --mainLinearWave7: #f2ca3a;
+}
+
+.theme-tablet {
+  /*base colors*/
+  --background: #22003d;
+  --sphere1: #005f15;
+  --sphere2: #7200b5;
+  --sphere3: #3900aa;
+  --sphereNone: #472265;
+  --accentButtonLeft: #005f15;
+  --accentButtonRight: #007a31;
+  --accentButtonLeftHover: #01390e;
+  --accentButtonRightHover: #006026;
+  --accentButtonLeftActive: #122800;
+  --accentButtonRightActive: #004b1e;
+  --lightGlass: #ffffff;
+  --darkGlass: #000000;
+  --mainText: #ffffff;
+
+  /*start page*/
+  --mainTopCenterWaveLeft: #c54aff;
+  --mainTopCenterWaveRight: #7008a0;
+
+  --mainTopLeftWaveLeft: #7c00b7;
+  --mainTopLeftWaveRight: #2100a6;
+
+  --mainBottomLeftWaveLeft: #c54aff;
+  --mainBottomLeftWaveRight: #7008a0;
+
+  --mainBottomCenterWaveLeft: #7c00b7;
+  --mainBottomCenterWaveRight: #2100a6;
+
+  --mainLinearWave1: #2e0053;
+  --mainLinearWave2: #2c004f;
+  --mainLinearWave3: #2a004b;
+  --mainLinearWave4: #280047;
+  --mainLinearWave5: #260043;
+  --mainLinearWave6: #23003f;
+  --mainLinearWave7: #21003c;
+}
+
+.theme-laptop {
+  /*base colors*/
+  --background: #22003d;
+  --sphere1: #005f15;
+  --sphere2: #7200b5;
+  --sphere3: #3900aa;
+  --sphereNone: #472265;
+  --accentButtonLeft: #005f15;
+  --accentButtonRight: #007a31;
+  --accentButtonLeftHover: #01390e;
+  --accentButtonRightHover: #006026;
+  --accentButtonLeftActive: #122800;
+  --accentButtonRightActive: #004b1e;
+  --lightGlass: #ffffff;
+  --darkGlass: #000000;
+  --mainText: #ffffff;
+
+  /*start page*/
+  --mainTopCenterWaveLeft: #c54aff;
+  --mainTopCenterWaveRight: #7008a0;
+
+  --mainTopLeftWaveLeft: #7c00b7;
+  --mainTopLeftWaveRight: #2100a6;
+
+  --mainBottomLeftWaveLeft: #c54aff;
+  --mainBottomLeftWaveRight: #7008a0;
+
+  --mainBottomCenterWaveLeft: #7c00b7;
+  --mainBottomCenterWaveRight: #2100a6;
+
+  --mainLinearWave1: #2e0053;
+  --mainLinearWave2: #2c004f;
+  --mainLinearWave3: #2a004b;
+  --mainLinearWave4: #280047;
+  --mainLinearWave5: #260043;
+  --mainLinearWave6: #23003f;
+  --mainLinearWave7: #21003c;
+}
+
+.theme-drone {
+  /*base colors*/
+  --background: #22003d;
+  --sphere1: #005f15;
+  --sphere2: #7200b5;
+  --sphere3: #3900aa;
+  --sphereNone: #472265;
+  --accentButtonLeft: #005f15;
+  --accentButtonRight: #007a31;
+  --accentButtonLeftHover: #01390e;
+  --accentButtonRightHover: #006026;
+  --accentButtonLeftActive: #122800;
+  --accentButtonRightActive: #004b1e;
+  --lightGlass: #ffffff;
+  --darkGlass: #000000;
+  --mainText: #ffffff;
+
+  /*start page*/
+  --mainTopCenterWaveLeft: #c54aff;
+  --mainTopCenterWaveRight: #7008a0;
+
+  --mainTopLeftWaveLeft: #7c00b7;
+  --mainTopLeftWaveRight: #2100a6;
+
+  --mainBottomLeftWaveLeft: #c54aff;
+  --mainBottomLeftWaveRight: #7008a0;
+
+  --mainBottomCenterWaveLeft: #7c00b7;
+  --mainBottomCenterWaveRight: #2100a6;
+
+  --mainLinearWave1: #2e0053;
+  --mainLinearWave2: #2c004f;
+  --mainLinearWave3: #2a004b;
+  --mainLinearWave4: #280047;
+  --mainLinearWave5: #260043;
+  --mainLinearWave6: #23003f;
+  --mainLinearWave7: #21003c;
+}
+
+.theme-coffeemachine {
+  /*base colors*/
+  --background: #22003d;
+  --sphere1: #005f15;
+  --sphere2: #7200b5;
+  --sphere3: #3900aa;
+  --sphereNone: #472265;
+  --accentButtonLeft: #005f15;
+  --accentButtonRight: #007a31;
+  --accentButtonLeftHover: #01390e;
+  --accentButtonRightHover: #006026;
+  --accentButtonLeftActive: #122800;
+  --accentButtonRightActive: #004b1e;
+  --lightGlass: #ffffff;
+  --darkGlass: #000000;
+  --mainText: #ffffff;
+
+  /*start page*/
+  --mainTopCenterWaveLeft: #c54aff;
+  --mainTopCenterWaveRight: #7008a0;
+
+  --mainTopLeftWaveLeft: #7c00b7;
+  --mainTopLeftWaveRight: #2100a6;
+
+  --mainBottomLeftWaveLeft: #c54aff;
+  --mainBottomLeftWaveRight: #7008a0;
+
+  --mainBottomCenterWaveLeft: #7c00b7;
+  --mainBottomCenterWaveRight: #2100a6;
+
+  --mainLinearWave1: #2e0053;
+  --mainLinearWave2: #2c004f;
+  --mainLinearWave3: #2a004b;
+  --mainLinearWave4: #280047;
+  --mainLinearWave5: #260043;
+  --mainLinearWave6: #23003f;
+  --mainLinearWave7: #21003c;
+}

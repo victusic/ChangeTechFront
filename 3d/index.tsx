@@ -1,0 +1,1 @@
+export { CoffeeMachineModel } from './CoffeeMachine';
