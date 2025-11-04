@@ -1,13 +1,25 @@
 import { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import { appWithTranslation } from 'next-i18next';
-import theme from '@/theme';
+import { createTheme } from '@/theme';
+import { ThemeProvider, useThemeContext } from '@/contexts/ThemeContext';
 
-function App({ Component, pageProps }: AppProps) {
+function AppContent({ Component, pageProps }: AppProps) {
+  const { currentTheme } = useThemeContext();
+  const theme = createTheme(currentTheme);
+
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
+  );
+}
+
+function App(props: AppProps) {
+  return (
+    <ThemeProvider>
+      <AppContent {...props} />
+    </ThemeProvider>
   );
 }
 

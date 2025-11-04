@@ -10,11 +10,13 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  HStack,
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import ThemeSwitcher from './ThemeSwitcher';
 
 interface LayoutProps {
   children: ReactNode;
@@ -66,22 +68,25 @@ export default function Layout({ children }: LayoutProps) {
               </Button>
             </Stack>
 
-            <Menu>
-              <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                {getLanguageName(locale || 'en')}
-              </MenuButton>
-              <MenuList>
-                {locales?.map((loc) => (
-                  <MenuItem
-                    key={loc}
-                    onClick={() => changeLanguage(loc)}
-                    fontWeight={locale === loc ? 'bold' : 'normal'}
-                  >
-                    {getLanguageName(loc)}
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Menu>
+            <HStack spacing={4}>
+              <ThemeSwitcher />
+              <Menu>
+                <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                  {getLanguageName(locale || 'en')}
+                </MenuButton>
+                <MenuList>
+                  {locales?.map((loc) => (
+                    <MenuItem
+                      key={loc}
+                      onClick={() => changeLanguage(loc)}
+                      fontWeight={locale === loc ? 'bold' : 'normal'}
+                    >
+                      {getLanguageName(loc)}
+                    </MenuItem>
+                  ))}
+                </MenuList>
+              </Menu>
+            </HStack>
           </Flex>
         </Container>
       </Box>
