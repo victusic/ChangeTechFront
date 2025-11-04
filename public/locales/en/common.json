@@ -1,0 +1,34 @@
+{
+  "home": {
+    "title": "Home Page",
+    "description": "Welcome to our multilingual application",
+    "content": "This is the home page with support for three languages: English, Russian, and Kazakh."
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn more about our project",
+    "content": "This application is built with Next.js, TypeScript, React, and Chakra UI with i18n support."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us",
+    "content": "Feel free to reach out to us through our contact form.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "common": {
+    "welcome": "Welcome",
+    "loading": "Loading...",
+    "error": "An error occurred"
+  }
+}

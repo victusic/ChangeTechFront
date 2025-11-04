@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">Change Tech (Front)</h1>
+<!-- 
+<h3>ENG</h3>
+<h4>The largest project I've created is a full-fledged bookstore (except for payment), with adaptive layout, using the SCSS preprocessor</h4> 
+<h5>React/Redux is also implemented:</h5>
+<ul>
+  <li>Page and dynamic pagination</li>
+  <li>Filters, sorting</li>
+  <li>Cart, Favorites, orders, personal cabinet</li>
+  <li>Realized promotions, promo codes, work with bank cards</li>
+  <li>and much more...</li>
+</ul>-->
 
-## Getting Started
+<!-- <h4>See the result: https://green-bookva.shop/</h4>
 
-First, run the development server:
+<h4>The project is powered by <a href="https://github.com/victusic/GreenBookvaApi">GreenBookvaApi</a></h4>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h5>Additionally:</h5>
+<ul>
+  <li><a href="https://www.figma.com/file/MNIRiMpLyB3krgtCViVkhe/Green-Bookva?type=design&node-id=0%3A1&mode=design&t=yUH5tkRf9JODAQhw-1">Project in Figma (Ui Kit, design)</a></li>
+  <li><a href="https://drive.google.com/drive/folders/1ohxieZ_U31q61mQcNQkOw1FyBHyYmExR?usp=sharing">Sketch file and ER</a></li>
+</ul>  -->
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- <h3>RU</h3>
+<h4>Самый крупный проект, созданной мной, представляет из себя полноценный книжный магазин (кроме оплаты), с адаптивной вёрсткой, с применением препроцессора SCSS</h4>
+<h5>Применены React/Redux, так же реализованны:</h5>
+<ul>
+  <li>Постраничная и динамическия пагинация</li>
+  <li>Фильтры, сортировка</li>
+  <li>Корзина, Избранное, заказы, личный кабинет</li>
+  <li>Реализованны акции, промокоды, работа с банковскими картами</li>
+  <li>и многое другое...</li>
+</ul>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<h4>Увидеть на результат: https://green-bookva.shop/</h4>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<h4>Проект работает с помощью <a href="https://github.com/victusic/GreenBookvaApi">GreenBookvaApi</a></h4>
 
-## Learn More
+<h5>Дополнительно:</h5>
+<ul>
+  <li><a href="https://www.figma.com/file/MNIRiMpLyB3krgtCViVkhe/Green-Bookva?type=design&node-id=0%3A1&mode=design&t=yUH5tkRf9JODAQhw-1">Проект в Figma (Ui Kit, design)</a></li>
+  <li><a href="https://drive.google.com/drive/folders/1ohxieZ_U31q61mQcNQkOw1FyBHyYmExR?usp=sharing">Файл с набросками и ER</a></li>
+</ul>
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<h6>Презентационная работа</h6> -->
