@@ -27,14 +27,15 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState<ThemeName>("blue");
+  const [currentTheme, setCurrentTheme] = useState<ThemeName>("tablet");
 
   useEffect(() => {
-    // Загрузка темы из localStorage при монтировании
     const savedTheme = localStorage.getItem("colorTheme") as ThemeName;
     if (
       savedTheme &&
-      ["blue", "green", "purple", "orange", "teal"].includes(savedTheme)
+      ["phone", "tablet", "laptop", "drone", "coffeeMachine"].includes(
+        savedTheme
+      )
     ) {
       setCurrentTheme(savedTheme);
     }

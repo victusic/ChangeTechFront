@@ -1,8 +1,9 @@
-import { AppProps } from 'next/app';
-import { ChakraProvider } from '@chakra-ui/react';
-import { appWithTranslation } from 'next-i18next';
-import { createTheme } from '@/theme';
-import { ThemeProvider, useThemeContext } from '@/contexts/ThemeContext';
+import { AppProps } from "next/app";
+import { ChakraProvider } from "@chakra-ui/react";
+import { appWithTranslation } from "next-i18next";
+import { createTheme } from "@/theme";
+import { ThemeProvider, useThemeContext } from "@/contexts/ThemeContext";
+import "@/assets/fonts/fonts.css";
 
 function AppContent({ Component, pageProps }: AppProps) {
   const { currentTheme } = useThemeContext();

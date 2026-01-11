@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 import {
   Box,
   Flex,
@@ -11,24 +11,24 @@ import {
   MenuList,
   MenuItem,
   HStack,
-} from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
-import ThemeSwitcher from './ThemeSwitcher';
+} from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const router = useRouter();
   const { locale, locales, pathname, query, asPath } = router;
 
-  const bgColor = useColorModeValue('white', 'gray.800');
-  const borderColor = useColorModeValue('gray.200', 'gray.700');
+  const bgColor = useColorModeValue("white", "gray.800");
+  const borderColor = useColorModeValue("gray.200", "gray.700");
 
   const changeLanguage = (newLocale: string) => {
     router.push({ pathname, query }, asPath, { locale: newLocale });
@@ -36,16 +36,16 @@ export default function Layout({ children }: LayoutProps) {
 
   const getLanguageName = (lang: string) => {
     const names: { [key: string]: string } = {
-      en: 'English',
-      ru: 'Русский',
-      kz: 'Қазақша',
+      en: "English",
+      ru: "Русский",
+      kz: "Қазақша",
     };
     return names[lang] || lang;
   };
 
   return (
     <Box>
-      <Box
+      {/* <Box
         as="nav"
         bg={bgColor}
         borderBottom="1px"
@@ -58,13 +58,13 @@ export default function Layout({ children }: LayoutProps) {
           <Flex h={16} alignItems="center" justifyContent="space-between">
             <Stack direction="row" spacing={7}>
               <Button as={Link} href="/" variant="ghost">
-                {t('navigation.home')}
+                {t("navigation.home")}
               </Button>
               <Button as={Link} href="/about" variant="ghost">
-                {t('navigation.about')}
+                {t("navigation.about")}
               </Button>
               <Button as={Link} href="/contact" variant="ghost">
-                {t('navigation.contact')}
+                {t("navigation.contact")}
               </Button>
             </Stack>
 
@@ -72,14 +72,14 @@ export default function Layout({ children }: LayoutProps) {
               <ThemeSwitcher />
               <Menu>
                 <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                  {getLanguageName(locale || 'en')}
+                  {getLanguageName(locale || "en")}
                 </MenuButton>
                 <MenuList>
                   {locales?.map((loc) => (
                     <MenuItem
                       key={loc}
                       onClick={() => changeLanguage(loc)}
-                      fontWeight={locale === loc ? 'bold' : 'normal'}
+                      fontWeight={locale === loc ? "bold" : "normal"}
                     >
                       {getLanguageName(loc)}
                     </MenuItem>
@@ -89,11 +89,9 @@ export default function Layout({ children }: LayoutProps) {
             </HStack>
           </Flex>
         </Container>
-      </Box>
+      </Box> */}
 
-      <Container maxW="container.xl" py={8}>
-        {children}
-      </Container>
+      {children}
     </Box>
   );
 }
