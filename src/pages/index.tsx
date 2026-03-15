@@ -1,64 +1,171 @@
-import { GetStaticProps } from 'next';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetStaticProps } from "next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
   Box,
   Heading,
   Text,
   VStack,
   useColorModeValue,
-} from '@chakra-ui/react';
-import Layout from '@/components/Layout';
+  Button,
+  SimpleGrid,
+  HStack,
+  Badge,
+} from "@chakra-ui/react";
+
+import { StartPage } from "@/modules/Start/pages/StartPage";
 
 export default function Home() {
-  const { t } = useTranslation('common');
-  
-  const headingColor = useColorModeValue('brand.600', 'brand.300');
+  const { t } = useTranslation("main");
+
+  const headingColor = useColorModeValue("red", "black");
   const bgGradient = useColorModeValue(
-    'linear(to-r, brand.50, blue.50)',
-    'linear(to-r, gray.900, gray.800)'
+    "linear(to-r, brand.50, accent.50)",
+    "linear(to-r, gray.900, gray.800)",
   );
 
   return (
-    <Layout>
-      <VStack spacing={8} align="stretch">
+    <VStack gap={0}>
+      <StartPage />
+      <VStack
+        gap={0}
+        pos="relative"
+        w="full"
+        h="100vh"
+        bg="mainPage.weSupportYouBg"
+      ></VStack>
+      <VStack
+        gap={0}
+        pos="relative"
+        w="full"
+        h="100vh"
+        bg="mainPage.typesBg"
+      ></VStack>
+      <VStack
+        gap={0}
+        pos="relative"
+        w="full"
+        h="100vh"
+        bg="mainPage.howSystemWorkBg"
+      ></VStack>
+      <VStack
+        gap={0}
+        pos="relative"
+        w="full"
+        h="100vh"
+        bg="mainPage.targetsBg"
+      ></VStack>
+      <VStack
+        gap={0}
+        pos="relative"
+        w="full"
+        h="300px"
+        bg="mainPage.aboutBg"
+      ></VStack>
+      <Box bgGradient={bgGradient} p={10} borderRadius="lg" textAlign="center">
+        <Text as="h1" textStyle="h1" color={headingColor} mb={4}>
+          {t("home.title")}
+        </Text>
+        <Text fontSize="xl" color="gray.600">
+          {t("home.description")}
+        </Text>
+      </Box>
+      <Box
+        p={8}
+        borderRadius="lg"
+        bg={useColorModeValue("white", "gray.700")}
+        shadow="md"
+      >
+        <Heading as="h2" size="lg" mb={4} color="brand.500">
+          Демонстрация цветовых тем
+        </Heading>
+        <Text fontSize="lg" lineHeight="tall" mb={6}>
+          {t("home.content")}
+        </Text>
+
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4} mb={6}>
+          <Button colorScheme="brand" size="lg">
+            Основная кнопка
+          </Button>
+          <Button colorScheme="brand" variant="outline" size="lg">
+            Вторичная кнопка
+          </Button>
+          <Button colorScheme="brand" variant="ghost" size="lg">
+            Прозрачная кнопка
+          </Button>
+        </SimpleGrid>
+
+        <HStack spacing={3} flexWrap="wrap">
+          <Badge colorScheme="brand" fontSize="md" px={3} py={1}>
+            Brand Badge
+          </Badge>
+          <Badge colorScheme="green" fontSize="md" px={3} py={1}>
+            Success
+          </Badge>
+          <Badge colorScheme="red" fontSize="md" px={3} py={1}>
+            Error
+          </Badge>
+          <Badge colorScheme="blue" fontSize="md" px={3} py={1}>
+            Info
+          </Badge>
+        </HStack>
+      </Box>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
         <Box
-          bgGradient={bgGradient}
-          p={10}
+          p={6}
           borderRadius="lg"
-          textAlign="center"
+          bg="brand.50"
+          borderLeft="4px solid"
+          borderColor="brand.500"
         >
-          <Heading as="h1" size="2xl" color={headingColor} mb={4}>
-            {t('home.title')}
+          <Heading as="h3" size="md" mb={3} color="brand.700">
+            Цветовая палитра
           </Heading>
-          <Text fontSize="xl" color="gray.600">
-            {t('home.description')}
+          <Text color="brand.900">
+            Каждая тема использует уникальную цветовую палитру с акцентными
+            цветами
           </Text>
         </Box>
 
-        <Box p={8} borderRadius="lg" bg={useColorModeValue('white', 'gray.700')} shadow="md">
-          <Text fontSize="lg" lineHeight="tall">
-            {t('home.content')}
-          </Text>
-        </Box>
-
-        <Box p={8} borderRadius="lg" bg={useColorModeValue('blue.50', 'gray.700')}>
-          <Heading as="h2" size="lg" mb={4}>
-            {t('common.welcome')}
+        <Box
+          p={6}
+          borderRadius="lg"
+          bg="accent.50"
+          borderLeft="4px solid"
+          borderColor="accent.500"
+        >
+          <Heading as="h3" size="md" mb={3} color="accent.700">
+            Акцентные цвета
           </Heading>
-          <Text>
-            Next.js 14 + TypeScript + Chakra UI + i18n (Turbopack)
+          <Text color="accent.900">
+            Дополнительная палитра для создания визуального разнообразия
           </Text>
         </Box>
-      </VStack>
-    </Layout>
+      </SimpleGrid>
+      <Box
+        p={8}
+        borderRadius="lg"
+        bg={useColorModeValue("gray.50", "gray.700")}
+      >
+        <Heading as="h2" size="lg" mb={4}>
+          {t("common.welcome")}
+        </Heading>
+        <Text mb={4}>
+          Next.js 14 + TypeScript + Chakra UI + i18n (Turbopack)
+        </Text>
+        <Text color="gray.600">
+          Используйте переключатель тем в навигационной панели для смены
+          цветовой схемы приложения.
+        </Text>
+      </Box>
+    </VStack>
   );
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+      ...(await serverSideTranslations(locale ?? "en", ["main"])),
     },
   };
 };

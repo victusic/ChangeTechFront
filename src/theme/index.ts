@@ -1,30 +1,36 @@
-import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
+import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import { colorThemes, type ThemeName } from "./colorThemes";
+import { breakpoints } from "./breakpoints";
+import { TextStyles } from "./textStyles";
+import { components } from "./components";
+import { size } from "./sizes";
 
 const config: ThemeConfig = {
-  initialColorMode: 'light',
+  initialColorMode: "light",
   useSystemColorMode: false,
 };
 
-const theme = extendTheme({
-  config,
-  colors: {
-    brand: {
-      50: '#e3f2fd',
-      100: '#bbdefb',
-      200: '#90caf9',
-      300: '#64b5f6',
-      400: '#42a5f5',
-      500: '#2196f3',
-      600: '#1e88e5',
-      700: '#1976d2',
-      800: '#1565c0',
-      900: '#0d47a1',
+export { colorThemes, type ThemeName, TextStyles };
+
+export const createTheme = (themeName: ThemeName) => {
+  const selectedTheme = colorThemes[themeName] || colorThemes.tablet;
+
+  return extendTheme({
+    config,
+    breakpoints,
+    colors: selectedTheme.colors,
+    ...size,
+    fonts: {
+      heading: `'Fira Sans', 'Inter', sans-serif`,
+      body: `'Fira Sans', 'Inter', sans-serif`,
+      mono: `'Rubik Mono One', monospace`,
+      display: `'Russo One', sans-serif`,
     },
-  },
-  fonts: {
-    heading: `'Inter', sans-serif`,
-    body: `'Inter', sans-serif`,
-  },
-});
+    textStyles: TextStyles,
+    components,
+  });
+};
+
+const theme = createTheme("tablet");
 
 export default theme;
