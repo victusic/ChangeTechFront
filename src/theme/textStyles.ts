@@ -1,4 +1,42 @@
 export const TextStyles = {
+  logo: {
+    fontFamily: "Rubik Mono One",
+    fontSize: {
+      lPc: "82px",
+      sPc: "58px",
+      sTab: "52px",
+      lMob: "42px",
+      base: "32px",
+    },
+    lineHeight: {
+      lPc: "102px",
+      sPc: "72px",
+      sTab: "64px",
+      lMob: "52px",
+      base: "40px",
+    },
+  },
+  plRegular: {
+    fontFamily: "'Russo One', sans-serif",
+    fontSize: {
+      lPc: "22px",
+      sPc: "18px",
+      sTab: "16px",
+      lMob: "14px",
+      base: "10px",
+    },
+    lineHeight: "auto",
+  },
+  menuNav: {
+    fontFamily: "'Russo One', sans-serif",
+    fontSize: {
+      lPc: "12px",
+      sPc: "10px",
+      sTab: "8px",
+      base: "6px",
+    },
+    lineHeight: "auto",
+  },
   h1: {
     fontFamily: "'Russo One', sans-serif",
     fontSize: {

@@ -7,22 +7,22 @@ import {
   HStack,
   Box,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { useThemeContext } from '@/contexts/ThemeContext';
-import { colorThemes, ThemeName } from '@/theme';
+} from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { useThemeContext } from "@/shared/context/ThemeContext";
+import { colorThemes, ThemeName } from "@/theme";
 
 export default function ThemeSwitcher() {
   const { currentTheme, setTheme } = useThemeContext();
-  const menuBg = useColorModeValue('white', 'gray.800');
-  const borderColor = useColorModeValue('gray.200', 'gray.600');
+  const menuBg = useColorModeValue("white", "gray.800");
+  const borderColor = useColorModeValue("gray.200", "gray.600");
 
   const themeColors: Record<ThemeName, string> = {
-    blue: '#2196f3',
-    green: '#4caf50',
-    purple: '#9c27b0',
-    orange: '#ff9800',
-    teal: '#009688',
+    blue: "#2196f3",
+    green: "#4caf50",
+    purple: "#9c27b0",
+    orange: "#ff9800",
+    teal: "#009688",
   };
 
   return (
@@ -34,12 +34,7 @@ export default function ThemeSwitcher() {
         size="sm"
       >
         <HStack spacing={2}>
-          <Box
-            w={4}
-            h={4}
-            borderRadius="full"
-            bg={themeColors[currentTheme]}
-          />
+          <Box w={4} h={4} borderRadius="full" bg={themeColors[currentTheme]} />
           <span>Тема</span>
         </HStack>
       </MenuButton>
@@ -48,10 +43,10 @@ export default function ThemeSwitcher() {
           <MenuItem
             key={themeName}
             onClick={() => setTheme(themeName)}
-            fontWeight={currentTheme === themeName ? 'bold' : 'normal'}
-            bg={currentTheme === themeName ? 'gray.100' : undefined}
+            fontWeight={currentTheme === themeName ? "bold" : "normal"}
+            bg={currentTheme === themeName ? "gray.100" : undefined}
             _dark={{
-              bg: currentTheme === themeName ? 'gray.700' : undefined,
+              bg: currentTheme === themeName ? "gray.700" : undefined,
             }}
           >
             <HStack spacing={3}>

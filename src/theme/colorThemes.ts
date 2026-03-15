@@ -5,19 +5,27 @@ export const colorThemes = {
     name: "phone",
     colors: {
       primary: {
-        bg: "#22003D",
-        mainText: "#FFFFFF",
-        titleText2: "#39894A",
+        100: "#C54AFF",
+        400: "#7C00B7",
+        500: "#7008A0",
+        900: "#22003D",
+        ///////////////////
         50: "#e3f2fd",
-        100: "#bbdefb",
         200: "#90caf9",
         300: "#64b5f6",
-        400: "#42a5f5",
-        500: "#2196f3",
         600: "#1e88e5",
         700: "#1976d2",
         800: "#1565c0",
-        900: "#0d47a1",
+      },
+      text: {
+        main: "#FFFFFF",
+        additional: "#000000",
+      },
+      accent: {
+        500: "#005F15",
+      },
+      secondary: {
+        600: "#2100A6",
       },
       mainPage: {
         weSupportYouBg: "#FFFFFF",
